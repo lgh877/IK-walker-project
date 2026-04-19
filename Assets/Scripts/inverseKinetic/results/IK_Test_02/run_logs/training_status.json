@@ -1,0 +1,56 @@
+{
+    "InverseKineticAgent": {
+        "checkpoints": [
+            {
+                "steps": 386973,
+                "file_path": "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-386973.onnx",
+                "reward": null,
+                "creation_time": 1776573253.0629673,
+                "auxillary_file_paths": [
+                    "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-386973.pt"
+                ]
+            },
+            {
+                "steps": 499973,
+                "file_path": "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-499973.onnx",
+                "reward": 2.855750267920287,
+                "creation_time": 1776573781.57134,
+                "auxillary_file_paths": [
+                    "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-499973.pt"
+                ]
+            },
+            {
+                "steps": 651573,
+                "file_path": "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-651573.onnx",
+                "reward": null,
+                "creation_time": 1776574088.6452365,
+                "auxillary_file_paths": [
+                    "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-651573.pt"
+                ]
+            },
+            {
+                "steps": 670473,
+                "file_path": "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-670473.onnx",
+                "reward": null,
+                "creation_time": 1776575825.3194914,
+                "auxillary_file_paths": [
+                    "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-670473.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 670473,
+            "file_path": "results\\IK_Test_02\\InverseKineticAgent.onnx",
+            "reward": null,
+            "creation_time": 1776575825.3194914,
+            "auxillary_file_paths": [
+                "results\\IK_Test_02\\InverseKineticAgent\\InverseKineticAgent-670473.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.2.0.dev0",
+        "torch_version": "2.8.0+cpu"
+    }
+}
