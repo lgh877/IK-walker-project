@@ -1,0 +1,29 @@
+{
+    "IKWalker": {
+        "checkpoints": [
+            {
+                "steps": 58192,
+                "file_path": "results\\IKW_Test_11\\IKWalker\\IKWalker-58192.onnx",
+                "reward": -0.018541364084033552,
+                "creation_time": 1776603096.2463465,
+                "auxillary_file_paths": [
+                    "results\\IKW_Test_11\\IKWalker\\IKWalker-58192.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 58192,
+            "file_path": "results\\IKW_Test_11\\IKWalker.onnx",
+            "reward": -0.018541364084033552,
+            "creation_time": 1776603096.2463465,
+            "auxillary_file_paths": [
+                "results\\IKW_Test_11\\IKWalker\\IKWalker-58192.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.2.0.dev0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

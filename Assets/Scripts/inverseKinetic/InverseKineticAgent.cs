@@ -6,8 +6,9 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgentsExamples;
 using BodyPart = Unity.MLAgentsExamples.BodyPart;
+using Unity.VisualScripting;
 
-public class InverseKineticAgent : Agent
+public class InverseKineticAgent : Agent, ILimbController
 {
     [Header("Normalization Settings")]
     [Tooltip("관절을 최대로 뻗었을 때의 대략적인 총 길이 (이 거리를 벗어나면 -1에 수렴)")]
@@ -37,6 +38,46 @@ public class InverseKineticAgent : Agent
     Vector3 directionBetRootAndLast;
     Vector3 directionBetRootAndTarget; // 추가: 시작점과 목적지 사이의 방향 벡터
 
+    public float GetMaxReach()
+    {
+        return maxReach;
+    }
+
+    public void InitializeLimb(GameObject parentWalker)
+    {
+        parentGameObject = parentWalker;
+        jointDriveController = parentGameObject.GetComponent<JointDriveController>();
+        rootPosition = limbParts[0].position;
+        for (int i = 0; i < limbParts.Count; i++)
+        {
+            SetUpBodyPart(limbParts[i]);
+        }
+    }
+
+    public void SetTargetPosition(Vector3 newTargetPosition)
+    {
+        targetPosition = newTargetPosition;
+    }
+
+    // 인터페이스 구현 3: 관절 초기화 (워커가 호출함)
+    public void ResetLimb()
+    {
+        foreach (var bodyPart in bodyParts)
+        {
+            bodyPart.Reset(bodyPart);
+        }
+    }
+
+    public Vector3 GetEndEffectorLocalPosition()
+    {
+        return limbParts[limbParts.Count - 1].position - limbParts[0].position;
+    }
+
+    public Vector3 GetRootPosition()
+    {
+        return limbParts[0].position;
+    }
+    /*
     public void Start()
     {
         jointDriveController = parentGameObject.GetComponent<JointDriveController>();
@@ -49,7 +90,7 @@ public class InverseKineticAgent : Agent
         }
 
         m_ResetParams = Academy.Instance.EnvironmentParameters;
-    }
+    }*/
     /*
     public override void Initialize()
     {
@@ -80,7 +121,7 @@ public class InverseKineticAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        targetPosition = rootPosition + new Vector3(Random.Range(-3f, 3f), -3.5f + Random.Range(0, 2f), Random.Range(-3f, 3f));
+        //targetPosition = rootPosition + new Vector3(Random.Range(-3f, 3f), -3.5f + Random.Range(0, 2f), Random.Range(-3f, 3f));
         //resetBodyParts();
     }
 
@@ -132,8 +173,6 @@ public class InverseKineticAgent : Agent
 
     private void FixedUpdate()
     {
-        if (limbParts.Count == 0) return;
-
         currentPosition = limbParts[0].position; // Root
         Vector3 endEffectorPos = limbParts[limbParts.Count - 1].position; // Target Group (목표 관절)
 

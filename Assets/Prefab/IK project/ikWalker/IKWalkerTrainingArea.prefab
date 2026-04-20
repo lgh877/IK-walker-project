@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 7571097463489162439}
   - component: {fileID: 2296695888747145657}
   m_Layer: 0
-  m_Name: rightFrontLeg2
+  m_Name: rightFrontLeg2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +550,7 @@ Transform:
   m_GameObject: {fileID: 1649684678301516940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
+  m_LocalPosition: {x: -1.19903, y: -0, z: -1.9288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 5158727528185012343}
   - component: {fileID: 3888249326252025421}
   - component: {fileID: 3302979730059393989}
+  - component: {fileID: 2603173154136071853}
   m_Layer: 0
   m_Name: rightFrontLeg1 (3)
   m_TagString: Untagged
@@ -590,14 +591,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877039774935624969}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.084186025, y: 0.25783423, z: -0.02255758, w: 0.9622502}
   m_LocalPosition: {x: -0.5, y: -0.3900001, z: -0.94000006}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7960797596491480677}
   m_Father: {fileID: 8675688443691706809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 30, z: 0}
 --- !u!33 &6063281224563248334
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -879,7 +880,22 @@ MonoBehaviour:
   - {fileID: 1771037688902659793}
   rootPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  parentGameObject: {fileID: 0}
+  parentGameObject: {fileID: 8070851368837411873}
+--- !u!114 &2603173154136071853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877039774935624969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &2070521386481585254
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +913,7 @@ GameObject:
   - component: {fileID: 6398801307050569606}
   - component: {fileID: 2839225907688244692}
   - component: {fileID: 2340198515437446256}
+  - component: {fileID: 1640581135325080984}
   m_Layer: 0
   m_Name: rightFrontLeg1
   m_TagString: Untagged
@@ -912,14 +929,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070521386481585254}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.084186025, y: 0.25783423, z: 0.02255758, w: 0.9622502}
   m_LocalPosition: {x: 0.5, y: -0.3900001, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1155086837825552143}
   m_Father: {fileID: 8675688443691706809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: 30, z: 0}
 --- !u!33 &4970782893073503985
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1202,6 +1219,21 @@ MonoBehaviour:
   rootPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   parentGameObject: {fileID: 8070851368837411873}
+--- !u!114 &1640581135325080984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070521386481585254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &2152352985431275866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1250,7 @@ GameObject:
   - component: {fileID: 243488237170537694}
   - component: {fileID: 5198992947899351816}
   m_Layer: 0
-  m_Name: rightFrontLeg2
+  m_Name: rightFrontLeg2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1495,7 +1527,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 4, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 432217652290044514}
@@ -1596,6 +1628,7 @@ GameObject:
   - component: {fileID: 1679880888700380414}
   - component: {fileID: 6712865588222173463}
   - component: {fileID: 4340749362702086177}
+  - component: {fileID: 6657407708952138458}
   m_Layer: 0
   m_Name: rightFrontLeg1 (1)
   m_TagString: Untagged
@@ -1611,14 +1644,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2521902788746213097}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.084186025, y: -0.25783414, z: -0.022557573, w: 0.9622502}
   m_LocalPosition: {x: -0.5, y: -0.3900001, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 52656406105110518}
   m_Father: {fileID: 8675688443691706809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10, y: -30, z: 0}
 --- !u!33 &8025639936416911803
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1901,6 +1934,21 @@ MonoBehaviour:
   rootPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   parentGameObject: {fileID: 8070851368837411873}
+--- !u!114 &6657407708952138458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2521902788746213097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &2542121150492108419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1965,7 @@ GameObject:
   - component: {fileID: 3165708989522004898}
   - component: {fileID: 8606222535529221145}
   m_Layer: 0
-  m_Name: rightFrontLeg4
+  m_Name: rightFrontLeg4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2556,7 +2604,7 @@ GameObject:
   - component: {fileID: 4917346563633896040}
   - component: {fileID: 3788701997511679988}
   m_Layer: 0
-  m_Name: rightFrontLeg4
+  m_Name: rightFrontLeg4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2811,6 +2859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8675688443691706809}
   - component: {fileID: 711004122467750588}
+  - component: {fileID: 1189299298194345224}
   m_Layer: 0
   m_Name: hip
   m_TagString: Untagged
@@ -2865,6 +2914,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &1189299298194345224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726944749891968891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074dcd842661d643b7474b94142d553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Unity.MLAgentsExamples.GroundContact
+  agent: {fileID: 0}
+  agentDoneOnGroundContact: 1
+  penalizeGroundContact: 0
+  groundContactPenalty: 0
+  touchingGround: 1
 --- !u!1 &4588688585440569989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,7 +2947,7 @@ GameObject:
   - component: {fileID: 661420124729652380}
   - component: {fileID: 102117733219120221}
   m_Layer: 0
-  m_Name: rightFrontLeg4
+  m_Name: rightFrontLeg4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3142,7 +3208,7 @@ GameObject:
   - component: {fileID: 4434370642724386590}
   - component: {fileID: 5409411596751303229}
   m_Layer: 0
-  m_Name: rightFrontLeg3
+  m_Name: rightFrontLeg3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3406,7 +3472,7 @@ GameObject:
   - component: {fileID: 1705476207939025430}
   - component: {fileID: 3950570719505534504}
   m_Layer: 0
-  m_Name: rightFrontLeg3
+  m_Name: rightFrontLeg3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3671,6 +3737,7 @@ GameObject:
   - component: {fileID: 573141730913444532}
   - component: {fileID: 1979632614758794454}
   - component: {fileID: 4792185980023378148}
+  - component: {fileID: 4891645221293082208}
   m_Layer: 0
   m_Name: rightFrontLeg1 (2)
   m_TagString: Untagged
@@ -3686,14 +3753,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7652080739096659437}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.084186025, y: -0.25783414, z: 0.022557573, w: 0.9622502}
   m_LocalPosition: {x: 0.5, y: -0.3900001, z: -0.94000006}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1001047831866097499}
   m_Father: {fileID: 8675688443691706809}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: -30, z: 0}
 --- !u!33 &2470997776891944619
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3975,7 +4042,22 @@ MonoBehaviour:
   - {fileID: 1660207638741322315}
   rootPosition: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  parentGameObject: {fileID: 0}
+  parentGameObject: {fileID: 8070851368837411873}
+--- !u!114 &4891645221293082208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7652080739096659437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.DecisionRequester
+  DecisionPeriod: 5
+  DecisionStep: 0
+  TakeActionsBetweenDecisions: 1
 --- !u!1 &7755472115326744235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3992,7 +4074,7 @@ GameObject:
   - component: {fileID: 491892248964105344}
   - component: {fileID: 864434275008400012}
   m_Layer: 0
-  m_Name: rightFrontLeg3
+  m_Name: rightFrontLeg3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4256,7 +4338,7 @@ GameObject:
   - component: {fileID: 9016494219503510825}
   - component: {fileID: 5584837288971463952}
   m_Layer: 0
-  m_Name: rightFrontLeg2
+  m_Name: rightFrontLeg2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4533,7 +4615,7 @@ Transform:
   m_GameObject: {fileID: 8070851368837411873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4569,19 +4651,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.ML-Agents::Unity.MLAgents.Policies.BehaviorParameters
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 24
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 0
+      m_NumContinuousActions: 12
       BranchSizes: 
-    VectorActionSize: 
+    VectorActionSize: 0c000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 0
+    VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: c26096a676c027345adc7f9e81ae869e, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
-  m_BehaviorName: IKWaker
+  m_BehaviorType: 1
+  m_BehaviorName: IKWalker
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -4602,12 +4684,12 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  limbs:
-  - {fileID: 2340198515437446256}
-  - {fileID: 4340749362702086177}
-  - {fileID: 4792185980023378148}
-  - {fileID: 3302979730059393989}
+  MaxStep: 3000
+  limbObjects:
+  - {fileID: 2070521386481585254}
+  - {fileID: 2521902788746213097}
+  - {fileID: 7652080739096659437}
+  - {fileID: 1877039774935624969}
   mainBody: {fileID: 8675688443691706809}
 --- !u!114 &9079231852731200581
 MonoBehaviour:
